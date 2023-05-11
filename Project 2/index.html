@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav Bar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            color: white;
+            height: 60px;
+            position: sticky;
+            z-index: 9;
+            top: 0%;
+            background-color: black;
+            opacity: 80%;
+        }
+
+        .logo{
+            width: 50%;
+            font-size: 50px;
+            font-family: sans-serif;
+            padding: 0 10px;
+        }
+        .logoimg{
+            height: 60px;
+            border-radius: 100%;
+            border-color: white;
+            border-width: 4px;
+        }
+        .listing {
+            width: 100%;
+            display: flex;
+            padding: 20px;
+            font-size: 18px;
+            font-family: sans-serif;
+            
+        }
+        ul li{
+            list-style-type: none;
+
+        }
+        ul li a{
+            padding: 0 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .right{
+           display: flex;
+           width: 30%;
+           height: 40px;
+           margin: 10px ;
+        }
+         .search{
+            border-radius: 15px;
+            border-width: 4px;
+            border-color: white;
+            width: 200px;
+            background-color: transparent;
+        }
+        .btn:hover, a:hover, .search:hover{
+            color: aqua;
+            border-color: aqua;
+            padding: 10px;
+        }
+        .btn{
+            width: 90px;
+            border-radius: 20px;
+            background-color: transparent;
+            color: white;
+            border-width: 3px;
+            border-color: white;
+            cursor: pointer;
+        }
+        .page1{
+            background-image: url('https://plus.unsplash.com/premium_photo-1673823666050-bb56202cc9e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+            background-blend-mode: lighten;
+            padding:1px;
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            }
+        .page2{
+            display: flex;
+            padding: 1px;
+            background-image: url('https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmFzaGlvbiUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');            
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+           
+        }
+            .page3{
+            height: 100vh;
+            width: 100vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://images.unsplash.com/photo-1544194215-541c2d3561a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60');
+        
+        }
+        .contactus{
+            background-color: rgb(180, 180, 174);
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0;
+        }
+        section{
+            display: flex;
+           height: 170px;
+           justify-content: center;
+           align-items: center;
+        }
+          .first{
+            font-size: 70px;
+            color: rgb(0, 225, 255);
+            padding: 30px 6px;
+            margin: 30px 6px;
+        }
+        .second{
+            color: white;
+            font-size: 20px;
+            margin: 5px;
+        }
+        .stock{
+            height: 300px;
+            border: 5px solid grey;
+            border-radius: 20px;
+        }
+
+        @media only screen and (max-width: 870px){
+        .listing{
+            flex-direction: column;
+            text-align: center;
+            position: absolute;
+            top: 65%;
+            left: 0;
+             transition: all 1s ease-in;
+             background-color: black;
+            display: none;
+        }
+        .navbar:hover .listing{
+            display: block;
+
+        }
+        li:hover{
+            background-color: blue;
+        }
+        li{
+            padding: 50px;
+            border: 2px solid white;
+        }
+        .right{
+            display: none;
+        } 
+ 
+        }
+        
+
+    </style>
+</head>
+<body>
+     <nav class="navbar h-nav" >
+    <img src="mylogo.png" alt="Profile" class="logoimg">
+    <label class="logo">A&A</label>
+    <ul class="listing v-class">
+        <li><a href="#">Home</a></li>
+       <li><a href="#">Profile</a></li>
+       <li><a href="#">Orders</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Feedback</a></li>
+     </ul>
+        <div class="right">
+        <input type="text" class="search">
+        <button class="btn">Search</button>
+    </div>
+    </nav>
+    <div class="page1">
+    <section >
+        <div class="first"></div>
+        <div class="second"></div>
+    </section>
+    <section>
+        <div class="first"></div>
+        <div class="second"></div>
+    </section>
+    </div>
+    <div class="page2">
+        <section >
+            <div class="first"></div>
+            <div class="second"></div>
+        </section>
+        <section>
+            <div class="first"></div>
+            <div class="second"></div>
+        </section>
+    </div>
+    <div class="page3">
+        <section >
+            <div class="first"></div>
+            <div class="second"></div>
+        </section>
+        <section>
+            <div class="first"></div>
+            <div class="second"></div>
+        </section>
+    </div>
+    <div class="contactus">
+       <br> <h3>Contact Us</h3><br>
+        <br><input type="text" class="Email"><br>
+        <br><input type="description" class="feedback"><br>
+    </div>
+    
+</body>
+</html>
